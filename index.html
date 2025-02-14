@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study MBBS Abroad</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+  />
+  <body>
+    <header
+      class="relative min-h-screen flex justify-center items-center text-center text-white"
+    >
+      <img
+        src="./images/image.png"
+        class="absolute w-full h-full object-cover"
+        alt="Study MBBS Abroad"
+      />
+
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+
+      <div class="relative max-w-2xl px-6">
+        <h1 class="text-5xl font-extrabold leading-tight">Study MBBS Abroad</h1>
+        <p class="mt-4 text-lg">
+          Get world-class medical education at an affordable cost.
+        </p>
+        <button
+          onclick="openModal()"
+          aria-label="Apply Now"
+          class="mt-6 px-6 py-3 bg-yellow-500 text-black font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition duration-300"
+        >
+          Apply Now
+        </button>
+      </div>
+    </header>
+
+    <div
+      id="applyModal"
+      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden transition-opacity duration-300"
+    >
+      <div class="bg-white m-10 p-8 rounded-lg shadow-xl max-w-lg w-full relative">
+        <button
+          onclick="closeModal()"
+          class="absolute top-3 right-3 text-gray-600 hover:text-black text-xl"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-3xl font-bold mb-4 text-center">Apply Now</h2>
+        <p class="text-gray-600 mb-6 text-center">
+          Fill in your details and we will contact you.
+        </p>
+
+        <form id="contactForm">
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium">Full Name</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter your full name"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+              required
+            />
+
+            <p id="nameError" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium">Email Address</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              class="w-full p-3 border rounded-lg"
+              required
+            />
+            <p id="emailError" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium"
+              >Contact Number</label
+            >
+            <input
+              id="phone"
+              type="text"
+              placeholder="Enter your contact number"
+              class="w-full p-3 border rounded-lg"
+              required
+            />
+            <p id="phoneError" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-medium">Address</label>
+            <input
+              id="address"
+              type="text"
+              placeholder="Enter your address"
+              class="w-full p-3 border rounded-lg"
+              required
+            />
+            <p id="addressError" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <div class="flex justify-between mt-6">
+            <button
+              type="button"
+              onclick="closeModal()"
+              class="px-6 py-3 bg-gray-300 text-gray-800 font-semibold rounded-lg hover:bg-gray-400 transition"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              class="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <section class="py-16 px-6 bg-gray-100 text-center">
+      <h2 class="text-4xl font-bold text-gray-800">Why Study MBBS Abroad?</h2>
+      <p class="mt-3 text-lg text-gray-600">
+        Top reasons why international medical education is a great choice.
+      </p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <h3 class="text-2xl font-semibold">Affordable Fees</h3>
+          <p class="mt-2 text-gray-600">
+            Low tuition costs compared to private medical colleges.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <h3 class="text-2xl font-semibold">Globally Recognized</h3>
+          <p class="mt-2 text-gray-600">
+            Degrees recognized by WHO, NMC, and other medical bodies.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <h3 class="text-2xl font-semibold">No Entrance Exam</h3>
+          <p class="mt-2 text-gray-600">
+            Direct admission without NEET for many universities.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <h3 class="text-2xl font-semibold">Quality Education</h3>
+          <p class="mt-2 text-gray-600">
+            Modern labs, experienced faculty, and globally recognized
+            curriculum.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <h3 class="text-2xl font-semibold">Career Opportunities</h3>
+          <p class="mt-2 text-gray-600">
+            Eligible for FMGE, USMLE, PLAB, and other medical licensing exams.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <h3 class="text-2xl font-semibold">Safe & Supportive Environment</h3>
+          <p class="mt-2 text-gray-600">
+            Secure campuses with Indian food and strong student communities.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="w-full h-1 bg-gray-500"></div>
+
+    <section class="py-16 px-6 text-center bg-gray-100">
+      <h2 class="text-4xl font-bold text-gray-800">Top MBBS Destinations</h2>
+      <p class="mt-3 text-lg text-gray-600">
+        Explore the best countries for studying MBBS abroad.
+      </p>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-8 max-w-6xl mx-auto"
+      >
+        <div
+          class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center transition transform hover:scale-105"
+        >
+          <span class="text-3xl">🇷🇺</span>
+          <h3 class="text-xl font-bold mt-2">Russia</h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Affordable tuition, globally recognized degrees, and high-quality
+            education.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center transition transform hover:scale-105"
+        >
+          <span class="text-3xl">🇺🇿</span>
+          <h3 class="text-xl font-bold mt-2">Uzbekistan</h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Low living costs, English-medium universities, and simplified
+            admission process.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center transition transform hover:scale-105"
+        >
+          <span class="text-3xl">🇰🇿</span>
+          <h3 class="text-xl font-bold mt-2">Kazakhstan</h3>
+          <p class="text-gray-600 text-sm mt-2">
+            WHO & MCI approved universities, affordable fees, and good
+            infrastructure.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center transition transform hover:scale-105"
+        >
+          <span class="text-3xl">🇵🇭</span>
+          <h3 class="text-xl font-bold mt-2">Philippines</h3>
+          <p class="text-gray-600 text-sm mt-2">
+            US-based curriculum, high FMGE passing rate, and English-speaking
+            environment.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center transition transform hover:scale-105"
+        >
+          <span class="text-3xl">🇰🇬</span>
+          <h3 class="text-xl font-bold mt-2">Kyrgyzstan</h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Low tuition fees, good quality education, and NMC-recognized
+            universities.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center transition transform hover:scale-105"
+        >
+          <span class="text-3xl">🇬🇪</span>
+          <h3 class="text-xl font-bold mt-2">Georgia</h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Globally recognized universities, English-taught courses, and no
+            entrance exam.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center transition transform hover:scale-105"
+        >
+          <span class="text-3xl">🇪🇬</span>
+          <h3 class="text-xl font-bold mt-2">Egypt</h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Low tuition fees, international exposure, and strong medical
+            programs.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center transition transform hover:scale-105"
+        >
+          <span class="text-3xl">🇲🇾</span>
+          <h3 class="text-xl font-bold mt-2">Malaysia</h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Affordable fees, advanced hospitals for clinical practice, and
+            top-ranked universities.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-white shadow-lg rounded-lg border border-gray-200 text-center transition transform hover:scale-105"
+        >
+          <span class="text-3xl">🇦🇿</span>
+          <h3 class="text-xl font-bold mt-2">Azerbaijan</h3>
+          <p class="text-gray-600 text-sm mt-2">
+            Low-cost MBBS programs, quality education, and MCI/WHO recognition.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="w-full h-1 bg-gray-500"></div>
+
+    <section class="py-16 bg-gray-100 text-center">
+      <h2 class="text-3xl font-semibold">Admission Process & Eligibility</h2>
+      <p class="mt-3 text-lg text-gray-600">Steps For Applying</p>
+
+      <div class="max-w-6xl mx-auto mt-5">
+        <ul class="list-none m-10 space-y-4">
+          <li class="p-4 bg-white rounded-lg shadow-md">
+            Step 1: Choose your university
+          </li>
+          <li class="p-4 bg-white rounded-lg shadow-md">
+            Step 2: Submit application and documents
+          </li>
+          <li class="p-4 bg-white rounded-lg shadow-md">
+            Step 3: Receive admission letter
+          </li>
+          <li class="p-4 bg-white rounded-lg shadow-md">
+            Step 4: Apply for a visa
+          </li>
+          <li class="p-4 bg-white rounded-lg shadow-md">
+            Step 5: Fly and start your MBBS journey!
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
